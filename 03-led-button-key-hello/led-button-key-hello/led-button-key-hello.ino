@@ -11,14 +11,14 @@ void setup() {
 
 void loop(){
   if (digitalRead(inputButton) == 0){
-    digitalWrite(outputLed,1);
+    digitalWrite(outputLed, LOW);
     if (!outputState) {
       outputState = true;
       DigiKeyboard.sendKeyStroke(0);
       DigiKeyboard.println("Hello!");
     }
   } else {
-    digitalWrite(outputLed,0);
+    digitalWrite(outputLed, HIGH);
     outputState = false;
   }
   DigiKeyboard.delay(10);
