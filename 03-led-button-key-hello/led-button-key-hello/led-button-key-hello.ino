@@ -21,5 +21,5 @@ void loop(){
     digitalWrite(outputLed,0);
     outputState = false;
   }
-  DigiKeyboard.delay(100);
+  DigiKeyboard.delay(10);
 }

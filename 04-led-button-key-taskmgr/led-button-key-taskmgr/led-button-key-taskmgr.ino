@@ -16,12 +16,11 @@ void loop() {
     if (!outputState) {
       outputState = true;
       DigiKeyboard.update();
-      //      DigiKeyboard.sendKeyStroke(KEY_ESCAPE, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
-      DigiKeyboard.sendKeyStroke(KEY_4, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT | MOD_SPACE);
+      DigiKeyboard.sendKeyStroke(KEY_ESCAPE, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
     }
   } else {
     digitalWrite(outputLed, 0);
     outputState = false;
   }
-  DigiKeyboard.delay(100);
+  DigiKeyboard.delay(10);
 }
