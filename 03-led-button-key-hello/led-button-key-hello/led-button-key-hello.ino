@@ -10,15 +10,15 @@ void setup() {
 }
 
 void loop(){
-  if (digitalRead(inputButton) == 0){
-    digitalWrite(outputLed, LOW);
+  if (digitalRead(inputButton) == HIGH){
+    digitalWrite(outputLed, HIGH);
     if (!outputState) {
       outputState = true;
       DigiKeyboard.sendKeyStroke(0);
       DigiKeyboard.println("Hello!");
     }
   } else {
-    digitalWrite(outputLed, HIGH);
+    digitalWrite(outputLed, LOW);
     outputState = false;
   }
   DigiKeyboard.delay(10);
